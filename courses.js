@@ -10,6 +10,7 @@
 //Encryption is converting credentials to token ,and getting back credentails from token
 //Hashing is only on way
 //Here for every encryption method we need a unique secret key
+//Use jsonwebtoken library for implementing encrption(sign()),decryption(verify())
 
 //Mangoose
 //It is a JS library that is used to connect to mongodb cluster,and give us methods to work on that cluster

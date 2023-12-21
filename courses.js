@@ -26,7 +26,7 @@ const mongoose = require('mongoose');
 
 
 
-mongoose.connect("mongodb+srv://19131a04d1:v7IeFiv28kUGDsoC@cluster0.trhnljw.mongodb.net/");
+mongoose.connect("mongodb+srv://19131a04d1:v7IeFiv28kUGDsoC@cluster0.trhnljw.mongodb.net/"); //use your connection string here.
 
 
 
@@ -37,7 +37,7 @@ const port = 3000;
 
 const secretkey = "YOUR_SECRET_KEY";
 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); //common middleware
 
 //define schemas
 const userSchema = new mongoose.Schema({
@@ -133,7 +133,7 @@ app.post('/admin/login', async (req, res) => {
     }
 });
 
-app.post('/admin/courses', authenticateJwt, async (req, res) => {
+app.post('/admin/courses', authenticateJwt, async (req, res) => {  //authenticateJwt is route specific middleware
     const course = req.body;
     course.courseId = Date.now();
     course.random = "hi";

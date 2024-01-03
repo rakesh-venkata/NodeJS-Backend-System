@@ -27,7 +27,7 @@ const mongoose = require('mongoose');
 
 
 mongoose.connect("mongodb+srv://19131a04d1:v7IeFiv28kUGDsoC@cluster0.trhnljw.mongodb.net/"); //use your connection string here.
-
+//Bydefault it assigns some test database,to provide yours add database_name after '/' at last.( /database_name ).
 
 
 
